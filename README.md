@@ -16,6 +16,11 @@ Websocket connection using Python programming language
 
 🐯💬 Culture-INFO, one-way or two-way communication is communication, and they need a suitable method for effective communication for negotiating, channeling, and communication. Since the data communication web socket can have the same or double the level of security but mostly implement real-time data communication with the benefits of effective response time the real-time data is selected and set for this communication method and to have personal communication data contained it required permission action and authority same as we accepted remote connection to our machine. <br>   
 🦁💬 Authentication levels should match the level of action and be acknowledged by users who act it is authentic, and contained personal information should encrypted or masked to the level of communication security and agreements to acknowledge since it is required by system work only. </br>
+
+
+## Websocket subscriber example
+🐐💬  It is simple to implement a web socket subscriber and this code is from a project and demo of the Alpaca stock trading product. The secretes key is the project from the website of the Alpaca application to create as a token since it is circuit breaks if there is warning access from a third-party. </br>
+
 ```
 def connect(self):
         """Establish WebSocket connection"""
