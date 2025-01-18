@@ -10,6 +10,8 @@ Websocket connection using Python programming language
     <b> ( Picture from Internet ) </b> </br>
 </p>
 
+🧸💬 Development method of communication with rapid response in milliseconds to minutes can be handled by Python programming language same as C and Java, today requirements of data methods ready processing programming languages and scripts programming create demands on Python programming languages combined with administrative works demands and cloud services platforms. </br>
+
 ```
 def connect(self):
         """Establish WebSocket connection"""
