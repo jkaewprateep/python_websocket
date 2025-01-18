@@ -98,19 +98,9 @@ def connect(self):
         self.is_connected = True
 ```
 
+👧💬 🎈 The main application executes and handles user interfaces and then transfers the data input into the database we selected. </br>
 ```
 if __name__ == "__main__":
-    # config = configparser.ConfigParser()
-    # path = os.path.join(os.getcwd(), "configuration.ini");
-    # config.readfp(open(path))
-    # APCA_API_DATA_URL = config.get('Alpaca API', 'APCA_API_DATA_URL')
-    # API_KEY = config.get('Alpaca API', 'ALPACA_API_KEY')
-    # API_SECRET = config.get('Alpaca API', 'ALPACA_SECRET_KEY')
-    # MONGO_URI = config.get('MongoDB', 'CONNECTION_STRING')
-    # API_KEY = "PKU50NJU0ZQYJCL5KQFI"
-    # API_SECRET = "3hNrEicrq4iciQ6NiQ7ctVXFiEyCedm9YnQ65eUy"
-    # MONGO_URI = "mongodb://localhost:27017/"
-
     load_dotenv()
     APCA_API_DATA_URL = os.getenv('APCA_API_DATA_URL_1')
     API_KEY = os.getenv('ALPACA_API_KEY_1')
