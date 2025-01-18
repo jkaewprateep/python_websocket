@@ -11,6 +11,7 @@ Websocket connection using Python programming language
 </p>
 
 🧸💬 Development method of communication with rapid response in milliseconds to minutes can be handled by Python programming language same as C and Java, today requirements of data methods ready processing programming languages and scripts programming create demands on Python programming languages combined with administrative works demands and cloud services platforms. </br>
+🐑💬 ➰ Publisher-subscriber is one method that supports web socket communication the same as event listeners and server-clients methods when demands and bandwidths are calculated and the publisher-subscriber method helps reduct the time of communication and amount of data transfer on networks since there is a small of chunks required forward-backward by this methods and remains requirements for duration of the communication. </br>
 
 ```
 def connect(self):
