@@ -86,3 +86,45 @@ def connect(self):
         
         self.is_connected = True
 ```
+
+```
+if __name__ == "__main__":
+    # config = configparser.ConfigParser()
+    # path = os.path.join(os.getcwd(), "configuration.ini");
+    # config.readfp(open(path))
+    # APCA_API_DATA_URL = config.get('Alpaca API', 'APCA_API_DATA_URL')
+    # API_KEY = config.get('Alpaca API', 'ALPACA_API_KEY')
+    # API_SECRET = config.get('Alpaca API', 'ALPACA_SECRET_KEY')
+    # MONGO_URI = config.get('MongoDB', 'CONNECTION_STRING')
+    # API_KEY = "PKU50NJU0ZQYJCL5KQFI"
+    # API_SECRET = "3hNrEicrq4iciQ6NiQ7ctVXFiEyCedm9YnQ65eUy"
+    # MONGO_URI = "mongodb://localhost:27017/"
+
+    load_dotenv()
+    APCA_API_DATA_URL = os.getenv('APCA_API_DATA_URL_1')
+    API_KEY = os.getenv('ALPACA_API_KEY_1')
+    API_SECRET = os.getenv('ALPACA_SECRET_KEY_1')
+    MONGO_URI = os.getenv('CONNECTION_STRING_1')
+
+
+    client = AlpacaWebsocketClient(API_KEY, API_SECRET, MONGO_URI, paper=True)
+    
+    try:
+        client.connect()
+        logging.info("Client initialized and connecting...")
+        
+        while True:
+            if not client.is_connected:
+                logging.warning("Connection lost - Attempting to reconnect...")
+                time.sleep(5)
+                client.connect()
+            time.sleep(1)
+            
+    except KeyboardInterrupt:
+        logging.info("Shutting down...")
+        client.disconnect()
+    except Exception as e:
+        logging.error(f"Unexpected error: {e}")
+        if client:
+            client.disconnect()
+```
